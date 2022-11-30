@@ -7,6 +7,18 @@ Let's program blockchain/bitcoin with
 
 - [FieldElement](ch01/ecc.py)
 
+## Console
+
+```
+$ python
+>>> from ch01.ecc import FieldElement
+>>> a = FieldElement(7, 13)
+>>> b = FieldFlement(12, 13)
+>>> c = FieldElement(6, 13)
+>>> print(a+b == c)
+Tree
+``
+
 Happy Hacking!
 
 [jimmy song]: https://programmingbitcoin.com/
