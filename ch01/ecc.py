@@ -29,6 +29,11 @@ class FieldElement:
         return self.__class__(num, self.prime)
 
 
+    def __pow__(self, exponent):
+        num = (self.num ** exponent) % self.prime
+        return self.__class__(num, self.prime)
+
+
     def __repr__(self):
         return 'FieldElement_{}({})'.format(self.prime, self.num)
 
