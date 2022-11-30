@@ -15,6 +15,13 @@ class FieldElement:
         return self.__class__(num, self.prime)
 
 
+    def __sub__(self, other):
+        if self.prime != other.prime:
+            raise TypeError('Cannot subtract two numbers in different Fields')
+        num = (self.num - other.num) % self.prime
+        return self.__class__(num, self.prime)
+
+
     def __repr__(self):
         return 'FieldElement_{}({})'.format(self.prime, self.num)
 
